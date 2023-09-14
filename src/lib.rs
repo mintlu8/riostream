@@ -75,7 +75,6 @@ impl Shl<endl> for rout where{
     fn shl(self, _: endl) -> () {
         stdout().write(b"\n").unwrap();
         stdout().flush().unwrap();
-        println!("");
     }
 }
 
@@ -103,7 +102,6 @@ impl Shl<endl> for rerr where{
     fn shl(self, _: endl) -> () {
         stderr().write(b"\n").unwrap();
         stderr().flush().unwrap();
-        println!("");
     }
 }
 
