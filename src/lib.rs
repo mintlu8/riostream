@@ -131,6 +131,13 @@ impl<T> Shr<&mut T> for rin where T: FromStr {
     }
 }
 
+impl Shr<flush> for rin {
+    type Output = ();
+
+    #[allow(unused_results)]
+    fn shr(self, _: flush) -> () {}
+}
+
 #[test]
 fn test() {
     rout << 1 << " " << "HelloWorld!" << endl;
