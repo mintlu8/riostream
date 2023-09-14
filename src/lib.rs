@@ -120,7 +120,7 @@ impl<T> Shr<&mut T> for rin where T: FromStr {
     fn shr(self, rhs: &mut T) -> rin {
         let mut buf = String::new();
         stdin().read_line(&mut buf).unwrap();
-        if let Ok(item) = T::from_str(&buf) {
+        if let Ok(item) = T::from_str(&buf.trim()) {
             *rhs = item
         } else {
             panic!("\"{}\" is not a {}", &buf, type_name::<T>())
